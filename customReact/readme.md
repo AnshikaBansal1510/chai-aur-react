@@ -15,7 +15,7 @@
 
   ```jsx
   const element = <h1 className="title">Hello React!</h1>;
- ``
+  
 ---
 
 are transformed by Babel into:
