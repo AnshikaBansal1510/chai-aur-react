@@ -1,12 +1,34 @@
-# React + Vite
+# React Setup and Implementations
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## React Implementations
+React provides two primary implementations based on the platform:
+- **react-dom** → Used for building web applications.
+- **react-native** → Used for building mobile applications (iOS & Android).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Creating a React App (Using Create React App)
+1. Run the following command to create a new React project:
+   ```bash
+   npx create-react-app <project-name>
+   cd <project-name>
+   npm install
+   npm run start
 
-## Expanding the ESLint configuration
+## Scripts Overview:
+**start** → Runs the project in the development environment.
+**build** → Prepares and optimizes the project for production deployment.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Creating a React App (Using Vite)
+1. Run the following command to create a new React project:
+   ```bash
+   npm create vite@latest
+   cd <project-name>
+   npm install
+   npm run dev
+
+## Notes
+Scripts play an essential role in running and building your project.
+Development mode (start/dev) is optimized for local development.
+Production build (build) generates an optimized version for deployment.
+   
