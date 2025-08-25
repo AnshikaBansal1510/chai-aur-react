@@ -48,6 +48,7 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 );
+````
 
 ---
 
@@ -65,25 +66,15 @@ createRoot(document.getElementById('root')).render(
 
 - <StrictMode> is a wrapper that helps highlight potential problems in development mode.
 
----
-
 ## Why Use React for Rendering?
 While we can render HTML elements directly using plain JavaScript, React provides programming capabilities in HTML-like syntax (JSX) with better structure and reusability.
-
 Virtual DOM makes updates faster and more efficient compared to direct DOM manipulation.
-
----
 
 ##React Scripts
 react-scripts (used by Create React App) automatically:
-
 Attaches and manages required JavaScript scripts in index.html.
-
 Provides development and build configurations without manual setup.
-
 The scripts are injected and executed using React and ReactDOM libraries.
-
----
 
 ## Export and Return Rules
 A React component can return only one parent element.
