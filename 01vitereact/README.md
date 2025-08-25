@@ -16,8 +16,8 @@ React provides two primary implementations based on the platform:
    npm run start
 
 ## Scripts Overview:
-**start** → Runs the project in the development environment.
-**build** → Prepares and optimizes the project for production deployment.
+- **start** → Runs the project in the development environment.
+- **build** → Prepares and optimizes the project for production deployment.
 
 ## Creating a React App (Using Vite)
 1. Run the following command to create a new React project:
@@ -28,7 +28,7 @@ React provides two primary implementations based on the platform:
    npm run dev
 
 ## Notes
-Scripts play an essential role in running and building your project.
-Development mode (start/dev) is optimized for local development.
-Production build (build) generates an optimized version for deployment.
+- Scripts play an essential role in running and building your project.
+- Development mode (start/dev) is optimized for local development.
+- Production build (build) generates an optimized version for deployment.
    
