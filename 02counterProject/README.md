@@ -1,12 +1,18 @@
-# React + Vite
+# React UI Updates and Hooks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## How UI Updates Work in React
+- In React, **UI updates are controlled and managed by React itself**.
+- Instead of directly manipulating the DOM (like in vanilla JavaScript), React uses a **Virtual DOM**.
+- Whenever data or state changes, React:
+  1. Creates a new Virtual DOM representation.
+  2. Compares it with the previous Virtual DOM (using the diffing algorithm).
+  3. Updates only the necessary parts of the actual DOM (efficient & fast).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Hooks and UI Updates
+- **Hooks** in React allow functional components to manage state and lifecycle without using class components.
+- When a state managed by a hook changes, React automatically **re-renders** the component and updates the UI accordingly.
+  
+In summary:
+React hooks are the mechanism that propagate changes in the UI automatically by controlling state and triggering re-renders efficiently.
