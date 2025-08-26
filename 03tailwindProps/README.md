@@ -19,7 +19,7 @@ function MyComponent({ title, items }) {
 }
 ```
 
-// Usage:
+Usage:
 <MyComponent title="Hello" items={['Apple', 'Banana']} />
 
 
