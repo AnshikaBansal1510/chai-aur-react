@@ -1,12 +1,15 @@
-# React + Vite
+### Key React and Browser Concepts
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- **`useCallback` Hook**:  
+  Used to **memoize a function definition** so that it is not recreated on every re-render, improving performance.
 
-Currently, two official plugins are available:
+- **`useEffect` Hook**:  
+  Runs:
+  1. **When the component is first mounted** (similar to page load).
+  2. **Whenever any of its dependencies change** (based on the dependency array).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **`useRef` Hook**:  
+  Provides a way to **persist values (like DOM references)** across renders without causing re-renders.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Browser vs Server Environment**:  
+  The **browser has a `window` object**, but on the **server (e.g., Next.js)** there is **no `window` object**. Always check for its existence before using it in server-side code.
