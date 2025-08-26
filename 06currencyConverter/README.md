@@ -1,12 +1,13 @@
-# React + Vite
+### Important React Best Practices & Key Notes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- **API & `onChange` Values**:  
+  Most APIs return values as **strings**, and `onChange` events also provide values as **strings**.  
+  Keep this in mind when performing calculations or type comparisons.
 
-Currently, two official plugins are available:
+- **Using Keys in JSX Loops**:  
+  Always provide a **unique `key` prop** when rendering lists in JSX to help React identify elements and optimize performance.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **`useId` Hook**:  
+  Used for **generating unique IDs** that remain stable across renders (e.g., for accessibility attributes like `id` and `htmlFor`).  
+  **Note:** Do **not** use `useId` to generate keys in a list.  
+  Keys should come from your **data itself** (like an `id` field from the API).
