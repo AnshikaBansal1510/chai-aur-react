@@ -3,7 +3,7 @@
 - **API & `onChange` Values**:  
   Most APIs return values as **strings**, and `onChange` events also provide values as **strings**.  
   Keep this in mind when performing calculations or type comparisons.
-
+ 
 - **Using Keys in JSX Loops**:  
   Always provide a **unique `key` prop** when rendering lists in JSX to help React identify elements and optimize performance.
 
