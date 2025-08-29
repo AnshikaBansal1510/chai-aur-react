@@ -1,12 +1,22 @@
-# React + Vite
+# 🌗 Theme Switcher with Context API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React app that demonstrates how to use the **Context API** to switch between **Light Mode** and **Dark Mode** without prop drilling.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Why Context API?
 
-## Expanding the ESLint configuration
+Normally, passing theme state (`light` / `dark`) through multiple nested components causes **prop drilling**.  
+With **Context API**, we can store theme state globally and access it anywhere in the component tree.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+# 📌 Key Points
+
+- Context API solves prop drilling by providing global state.
+
+- ThemeProvider manages the theme state (light / dark).
+
+- useTheme() (custom hook) makes consuming context easy.
+
+- Any component inside the ThemeProvider can toggle or read the theme.
