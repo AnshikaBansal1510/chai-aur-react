@@ -1,12 +1,46 @@
-# React + Vite
+# React Router Notes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A concise guide on how React Router works and the key concepts you need to know.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Navigation with `Link` and `NavLink`
 
-## Expanding the ESLint configuration
+- Instead of using the `<a>` tag (which refreshes the page), React Router provides the **`Link`** component.
+  - Use the `to` attribute instead of `href`.
+  - Example:  
+    ```jsx
+    <Link to="/about">Go to About</Link>
+    ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **`NavLink`** works like `Link` but also gives access to an `isActive` property.  
+  - This allows applying **dynamic CSS styling** based on the current URL.
+  - Example:  
+    ```jsx
+    <NavLink 
+      to="/home" 
+      className={({ isActive }) => (isActive ? "active-link" : "")}
+    >
+      Home
+    </NavLink>
+    ```
+
+---
+
+## 🛣️ Router Configuration with `RouterProvider`
+
+- The `RouterProvider` component takes a `router` prop.
+- The router is defined as an array of objects, where each object represents a route with a `path` and `element`.
+- Example:  
+  ```jsx
+  import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+  const router = createBrowserRouter([
+    { path: "/", element: <Home /> },
+    { path: "/about", element: <About /> },
+  ]);
+
+  function App() {
+    return <RouterProvider router={router} />;
+  }
+
