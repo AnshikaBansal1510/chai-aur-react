@@ -5,6 +5,9 @@ When passing props through multiple nested components (known as **Prop Drilling*
 For example:  
 `App → Dashboard → RightSide → TopComp → Card`  
 
+<img src="propdrilling.png" alt="Screenshot" width="500"/>
+
+
 Here, the `title` prop is only needed in `Card`, but it still has to be passed through `RightSide` and `TopComp`. This creates unnecessary complexity.  
 
 👉 To solve this, we use the **Context API** which provides global state management and eliminates prop drilling.
