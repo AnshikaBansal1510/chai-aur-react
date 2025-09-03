@@ -20,3 +20,5 @@ With **Context API**, we can store theme state globally and access it anywhere i
 - useTheme() (custom hook) makes consuming context easy.
 
 - Any component inside the ThemeProvider can toggle or read the theme.
+
+  
