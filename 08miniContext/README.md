@@ -105,6 +105,8 @@ function Card() {
 - **createContext()** → Creates a context object.  
 - **Context.Provider** → Makes values available to children.  
 - **useContext()** → Fetches values from a given context.  
-- **Custom Hook** → Improves code reusability and readability.  
+- **Custom Hook** → Improves code reusability and readability.
+
+  
 
 
